@@ -42,10 +42,10 @@ class MarkDownGenerator():
 [Reddit Stream](https://reddit-stream.com/comments/auto) (You must click this link from the comment page.)
         '''.format(
             ###REPLACE FOR LOCAL TIME
-            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=3), '%I:%M %p'),
-            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=2), '%I:%M %p'),
             datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=1), '%I:%M %p'),
             datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC), '%I:%M %p'),
+            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=-1), '%I:%M %p'),
+            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=-2), '%I:%M %p'),
             
             'http://www.nba.com/games/' + game.startDateEastern + '/' + vTeam.tricode + hTeam.tricode + '#/preview',
             'http://www.nba.com/games/' + game.startDateEastern + '/' + vTeam.tricode + hTeam.tricode + '#/matchup',
