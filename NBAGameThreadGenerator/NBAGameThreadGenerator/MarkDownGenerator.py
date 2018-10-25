@@ -44,8 +44,8 @@ class MarkDownGenerator():
             ###REPLACE FOR LOCAL TIME
             datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=1), '%I:%M %p'),
             datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC), '%I:%M %p'),
-            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=-1), '%I:%M %p'),
-            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) + datetime.timedelta(hours=-2), '%I:%M %p'),
+            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) - datetime.timedelta(hours=1), '%I:%M %p'),
+            datetime.datetime.strftime(utils.getGameStartTimeLocal(game.startTimeUTC) - datetime.timedelta(hours=2), '%I:%M %p'),
             
             'http://www.nba.com/games/' + game.startDateEastern + '/' + vTeam.tricode + hTeam.tricode + '#/preview',
             'http://www.nba.com/games/' + game.startDateEastern + '/' + vTeam.tricode + hTeam.tricode + '#/matchup',
