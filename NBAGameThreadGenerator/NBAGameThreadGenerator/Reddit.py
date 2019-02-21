@@ -2,6 +2,7 @@ import praw
 import prawcore
 import datetime
 import urllib
+import config
 
 from utils import utils
 
@@ -21,7 +22,9 @@ class Reddit(object):
         self.subredditThreads.refresh(self.reddit.subreddit(self.subreddit).new(limit=200))
 
     def __init__(self, subreddit):
-        self.reddit = praw.Reddit(user_agent='NBA Game Thread Generator')
+        self.reddit = praw.Reddit(client_id=config.client_id, 
+        client_secret=config.client_secret, password=config.password, 
+        user_agent='NBA Game Thread Generator', username=config.username)
         self.subreddit = subreddit
         self.subredditThreads = SubredditThreads()
 
